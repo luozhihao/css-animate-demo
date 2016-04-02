@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>android</title>
+	<style>
+		* {
+			padding:0;
+			margin:0;
+		}
+		.box {
+			width:400px;
+			height:400px;
+			margin:50px auto 0;
+
+		}
+		.top {
+			width: 200px;
+  			height: 100px;
+  			padding-left: 53px;
+  			position: relative;
+  			transition:all .1s ease-in;
+		}
+		.top:hover {
+			transform:rotate(-5deg) translate(-2px,-5px);
+			-webkit-transform:rotate(-5deg) translate(-2px,-5px);
+			-moz-transform:rotate(-5deg) translate(-2px,-5px);
+		}
+		.body {
+			position: absolute;
+			top: 50px;
+		}
+		.top>div,.body>div {
+			background: #A4CA39;
+			box-shadow: 2px 3px 3px 0 #ccc;
+		}
+		.top-part1 {
+			width:6px;
+			height:30px;
+			position: absolute;
+			left:103px;
+			border-radius:3px;
+			transform: rotate(-30deg);
+			-webkit-transform: rotate(-30deg);
+			-moz-transform: rotate(-30deg);
+		}
+		.top-part2 {
+			width:6px;
+			height:30px;
+			position: absolute;
+			left:198px;
+			border-radius:3px;
+			transform: rotate(30deg);
+			-webkit-transform: rotate(30deg);
+			-moz-transform: rotate(30deg);
+		}
+		.top-part3 {
+			width:180px;
+			height:80px;
+			position: absolute;
+			top:20px;
+			left:65px;
+			border-radius:90px 90px 0 0;
+		}
+		.top .top-part4 {
+			width:20px;
+			height:20px;
+			position: absolute;
+			top:50px;
+			border-radius:50%;
+			background: #fff;
+			animation:shine 1s infinite;
+			-webkit-animation:shine 1s infinite;
+			-moz-animation:shine 1s infinite;
+		}
+		.eye1 {left:100px;}
+		.eye2 {left:190px;}
+		.body-part1 {
+			width:180px;
+			height:160px;
+			border-radius: 0 0 30px 30px;
+			position: absolute;
+			top:110px;
+			left:65px;
+		}
+		.body-part2 {
+			width:40px;
+			height:135px;
+			border-radius: 25px;
+			position: absolute;
+			top:110px;
+		}
+		.hand1 {
+			left:15px;
+			transition:all .1s ease-in;
+		}
+		.hand2 {
+			left:255px;
+			transition:all .1s ease-in;
+		}
+		.body-part3 {
+			width:40px;
+			height:65px;
+			border-radius: 0 0 20px 20px;
+			position: absolute;
+			top:270px;
+		}
+		.foot1 {
+			left:100px;
+		}
+		.foot2 {
+			left:170px;
+		}
+		.hand1:hover {
+			transform: rotate(15deg) translate(-15px, 0);
+			-webkit-transform: rotate(15deg) translate(-15px, 0);
+		}
+		.hand2:hover {
+			transform: rotate(-30deg) translate(30px, 0);
+			-webkit-transform: rotate(-30deg) translate(30px, 0);
+		}
+		@keyframes shine {
+			0% {background: #fff;}
+			50% {background: blue;}
+			100% {background: #fff;}
+		}
+		@-webkit-keyframes shine {
+			0% {background: #fff;}
+			50% {background: blue;}
+			100% {background: #fff;}
+		}
+		@-moz-keyframes shine {
+			0% {background: #fff;}
+			50% {background: blue;}
+			100% {background: #fff;}
+		}
+	</style>
+</head>
+<body onload='onLoad()'>
+	<div class="box">
+		<div class="top">
+			<div class="top-part1"></div>
+			<div class="top-part2"></div>
+			<div class="top-part3"></div>
+			<div class="top-part4 eye1"></div>
+			<div class="top-part4 eye2"></div>
+		</div>
+		<div class="body">
+			<div class="body-part1"></div>
+			<div class="body-part2 hand1"></div>
+			<div class="body-part2 hand2"></div>
+			<div class="body-part3 foot1"></div>
+			<div class="body-part3 foot2"></div>
+		</div>
+	</div>
+	<script>
+		function onLoad(){
+			var now=new Date().getTime();
+			var page_load=performance.timing.domComplete - performance.timing.navigationStart;
+			alert('页面加载时间为：'+page_load);
+		}
+	</script>
+
+</body>
+</html>
